@@ -23,9 +23,11 @@ const Img = styled.img`
 const Title = styled.p`
   margin: 1rem;
   text-align: center;
-  background-color: black;
+  background-color: #000;
   color: white;
   border-radius: 5%;
+  font-size: 20px;
+  widht: 1vw;
 `;
 const BoxInput = styled.div`
   display: flex;
@@ -66,7 +68,7 @@ class Movies extends Component {
     const completeMovies = response.data.results.map(item => {
       return {
         ...item,
-        poster_path: `https://image.tmdb.org/t/p/w400${item.poster_path}`
+        poster_path: `https://image.tmdb.org/t/p/w300${item.poster_path}`
       };
     });
 
